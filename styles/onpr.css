@@ -13,6 +13,7 @@
   --textFont: "Roboto", sans-serif;
   --fontSizetitle: clamp(1.2rem, 0.8681rem + 1.77vw, 2rem);
   --primaryColor: #43b02a;
+  --contrastedPrimaryColor: #358d21;
   --primaryColorgreen: #baf8ab;
   --lightGray: #a0a0a0;
   --secondColor: #ec2020;
@@ -21,6 +22,7 @@
   --smbgColor: #f5f5f5;
   --textColor: #0f0f0f;
 }
+
 li {
   font-family: var(--textFont) !important;
   font-weight: 400;
@@ -37,20 +39,19 @@ h6 {
 p {
   font-family: var(--textFont);
 }
+label {
+  cursor: pointer;
+}
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* overflow-x: hidden; */
 }
-#homepage {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--bgColor);
-  display: flex;
-  flex-direction: column;
-  /* padding: .5rem 1rem; */
-}
+
+/* 
+  Nav bar design... this is the main
+  navigation bar container
+*/
 .navmenu {
   position: relative;
   display: flex;
@@ -63,13 +64,17 @@ body {
   border-bottom: solid 0.2rem var(--primaryColor);
   z-index: 2;
 }
+
 .navmenu > .uppernav {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0.5rem clamp(1rem, 0.5856rem + 2.21vw, 2rem);
+  gap: 1rem;
+  padding: 0.3rem clamp(1rem, 0.5856rem + 2.21vw, 2rem);
+  /* background-color: #0f0f0f; */
 }
+
 .logo_container {
   position: relative;
   display: flex;
@@ -77,14 +82,23 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.logo_container a {
+  display: inherit;
+  gap: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
 .logo_container img {
   height: clamp(1.8rem, 1.5094rem + 1.55vw, 2.5rem);
   width: clamp(1.8rem, 1.5094rem + 1.55vw, 2.5rem);
 }
-.logo_container > p {
+.logo_container p {
   font-family: var(--textFont);
-  font-size: var(--fontSizetitle);
+  font-size: 1.5rem;
   font-weight: 800;
+  color: var(--contrastedPrimaryColor);
 }
 .uppernav > .menu {
   width: 100%;
@@ -94,7 +108,7 @@ body {
 }
 
 .uppernav > .menu > li > a {
-  color: var(--textColor);
+  color: var(--contrastedPrimaryColor);
   font-weight: 600;
 }
 .uppernav > .menu > li > a > i {
@@ -102,9 +116,62 @@ body {
 }
 .navmenu .main_nav {
   width: 100%;
-  display: none;
   justify-content: center;
 }
+.language_changer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  cursor: pointer;
+}
+.language_changer p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--contrastedPrimaryColor);
+}
+
+
+
+.uppernav .list_language {
+  position: absolute;
+  right: 0rem;
+  top: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 10rem;
+  height: auto;
+  background-color: var(--bgColor);
+  z-index: 4;
+  transition: all 5s ease-in-out ;
+  display: none;
+}
+.list_language .singlelist_container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+  padding: 0.5rem 1rem;
+}
+.singlelist_container .labelcontainer {
+  display: flex;
+  gap: 0.2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.language_changer:focus .list_language{
+  display: flex;
+  /* transform: translateY(3rem); */
+}.list_language:focus{
+ display: flex;
+}
+
 .main_nav .menu {
   width: 100%;
   display: flex;
@@ -155,6 +222,23 @@ body {
 .main_nav .menu > li:hover .submenu {
   display: flex;
   top: 2rem;
+}
+
+/* 
+  End of main navigation menu
+*/
+
+/* 
+  Start of the main home section 
+  container
+*/
+#homepage {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  /* padding: .5rem 1rem; */
 }
 .main_container {
   width: 100%;
@@ -222,12 +306,21 @@ body {
   background-color: var(--secondColor);
   border-radius: 50%;
 }
+
+/* 
+  End of the main home section
+*/
+
+/* 
+  Starting the main container
+ */
+
 #main_content_container {
   width: 100%;
   gap: 2rem;
   padding: 1rem 2rem;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 .main_news_container {
@@ -328,6 +421,7 @@ body {
   padding: 0.2rem 0.2rem;
   border-radius: 0.2rem;
 }
+
 .sidebar > ul > li:hover {
   background-color: var(--primaryColor);
 }
@@ -345,6 +439,14 @@ body {
   background-color: var(--secondColor);
   margin-bottom: 0.4rem;
   margin-top: 0.1rem;
+}
+
+.tweetter_container {
+  /* background-color: #0f0f0f; */
+  width: 40%;
+  height: 40rem;
+  overflow-x: hidden;
+  scrollbar-width: 0px;
 }
 
 #history_about_onpr {
@@ -672,7 +774,6 @@ footer > .bottom_footer > .upper_content > .logo_container p {
   .navmenu > .main_nav .menu {
     /* width: 100; */
     overflow-x: scroll;
-
   }
   .main_nav .menu > li {
     width: 100%;

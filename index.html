@@ -16,33 +16,48 @@
         rel="stylesheet">
     <title>ONPR</title>
     <script src="https://kit.fontawesome.com/ee175aa0d8.js" crossorigin="anonymous"></script>
+    <script src="./js/translate/data.js"></script>
+    <script src="./js/translate/translationLogic.js"></script>
+    <script src="./js/translate/translationInjection.js" defer></script>
     <script src="./js/index.js" defer></script>
+
 </head>
 
 <body>
-    <div class="navmenu">
+    <nav class="navmenu">
         <div class="uppernav">
             <div class="logo_container">
-                <img src="./assets/imgs/logo.jpg" alt="Onpr_logo">
-                <p>ONPR</p>
+                <a href="#">
+                    <img src="./assets/imgs/logo.jpg" alt="Onpr_logo"
+                        title="Office National des pensions et risques professionels">
+                    <p>ONPR</p>
+                </a>
             </div>
-            <ul class="menu">
+            <ul class="menu" id="main_navigation">
                 <li>
-                    <a href="#homepage">Home</a>
+                    <a href="#homepage"></a>
                 </li>
                 <li>
-                    <a href="#homepage">Contact</a>
+                    <a href="#homepage"></a>
                 </li>
                 <li>
-                    <a href="#homepage">Blog</a>
-                </li>
-                <li>
-                    <a href="#homepage">
-                        <i class="fas fa-globe"></i>
-                        Fr
-                    </a>
+                    <a href="#homepage"></a>
                 </li>
             </ul>
+            <div class="language_changer" tabindex="0" title="changer la langue">
+                <img src="" alt="Current language" width="25" height="25">
+                <p></p>
+                <!-- <img tabindex=0 src="assets//svg/language.svg" alt="Change_languge" title="Changer la languge" width="20" height="20"> -->
+                <form class="list_language">
+                    <div class="singlelist_container">
+                        <input type="radio" name="french" id="french">
+                        <label for="french" class="labelcontainer">
+                            <img src="./assets/imgs/francaisIncon.png" alt="" width="25" height="25">
+                            <p>French</p>
+                        </label>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="main_nav">
             <ul class="menu">
@@ -123,7 +138,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </nav>
     <section id="homepage">
         <div class="main_container">
             <div class="curtain">
@@ -147,7 +162,7 @@
     </section>
 
     <section id="main_content_container">
-        <div class="menu_side">
+        <!-- <div class="menu_side">
             <div class="main_list_container sidebar">
                 <h3>Direction Général</h3>
                 <span class="underline"></span>
@@ -241,7 +256,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
         <section class="main_news_container">
             <div class="small_navigator">
@@ -324,7 +339,12 @@
                 </div>
             </div>
         </section>
-        <div class="menu_side">
+
+        <div class="tweetter_container">
+            <a class="twitter-timeline" href="https://twitter.com/Onpr2018?ref_src=twsrc%5Etfw">Real time tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <!-- <div class="menu_side">
             <div class="main_list_container sidebar">
                 <h3>Regime des pensions</h3>
                 <span class="underline"></span>
@@ -419,7 +439,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="Media_space">
@@ -468,7 +488,7 @@
         </div>
         <div class="contact_information">
             <div class="onpr_map">
-                <iframe 
+                <iframe
                     src="https://maps.google.com/maps?q=onpr,%20bujumbura-mairie,%20burundi&t=&z=17&ie=UTF8&iwloc=&output=embed"
                     frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                 </iframe>
@@ -789,13 +809,9 @@
                 <div class="sides">
                     <p>
                         Powered by
-                        <a 
-                            target="-blanck" 
-                            href='https://donexa.org'
-                            style="
+                        <a target="-blanck" href='https://donexa.org' style="
                                 color: #ffffff;
-                                "
-                        >
+                                ">
                             Donexa
                         </a>
                     </p>
