@@ -136,8 +136,8 @@ body {
 
 .uppernav .list_language {
   position: absolute;
-  right: 0rem;
-  top: 0;
+  right: -2rem;
+  top: 2rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -147,9 +147,18 @@ body {
   height: auto;
   background-color: var(--bgColor);
   z-index: 4;
-  transition: all 5s ease-in-out ;
+  border-radius: .3rem;
+  /* animation: fadeDown 5s ease ; */
   display: none;
-}
+} 
+/* @keyframes fadeDown {
+  from {
+    top: 0;
+  }to{
+    top : 3rem
+  }
+  
+} */
 .list_language .singlelist_container {
   display: flex;
   flex-direction: row-reverse;
