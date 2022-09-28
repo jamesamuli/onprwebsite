@@ -31,6 +31,7 @@ const Data = {
             about: {
                 title: "A propos de l'ONPR",
                 submenus: {
+                    htry : 'Historiques',
                     go: {
                         title: 'Direction général',
                         submenus: {
@@ -106,6 +107,7 @@ const Data = {
             about: {
                 title: "About ONPR",
                 submenus: {
+                    htry : 'Historiques',
                     go: {
                         title: 'General Management',
                         submenus: {
@@ -179,3 +181,4 @@ const Data = {
     }
 }
 
+console.log(Object.entries(Data))
