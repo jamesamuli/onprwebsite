@@ -61,7 +61,7 @@ Object.values(Data.languages).map((e, i) => {
 
     console.log(Data.languages[currentLanguage.code].fr)
 
-    selectLanguage.innerHTML += `<div class="singlelist_container">
+    selectLanguage.innerHTML += `<div class="singlelist_container" tabindex="0">
     <input 
         type="radio" 
         name= "language" 

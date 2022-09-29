@@ -38,7 +38,7 @@ const Data = {
                             srtr: "Secrétariat",
                             csil: "Conseillers",
                             agc: "Agences",
-                            ccrp: "Cellule communication et celations publiques",
+                            ccrp: "Cellule communication et relations publiques",
                             ci: "Cellule informatique",
                             mc: "Médecin conseil",
                             actr: "Actuaire",
@@ -47,7 +47,7 @@ const Data = {
                         }
                     },
                     fao: {
-                        title: 'Direction administrative',
+                        title: 'Direction Administrative et Financière',
                         submenus: {
                             srtr: "Secrétariat",
                             spl: "Service du personnel et logistique",
