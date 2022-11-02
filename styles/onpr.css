@@ -132,8 +132,6 @@ body {
   color: var(--contrastedPrimaryColor);
 }
 
-
-
 .uppernav .list_language {
   position: absolute;
   right: -2rem;
@@ -147,10 +145,10 @@ body {
   height: auto;
   background-color: var(--bgColor);
   z-index: 4;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   /* animation: fadeDown 5s ease ; */
   display: none;
-} 
+}
 /* @keyframes fadeDown {
   from {
     top: 0;
@@ -174,69 +172,75 @@ body {
   align-items: center;
 }
 
-.language_changer:focus .list_language{
+.language_changer:focus .list_language {
   display: flex;
-  /* transform: translateY(3rem); */
-}.list_language:focus{
- display: flex;
+}
+.list_language:hover {
+  display: flex;
 }
 
 /* Start of the main navigation menu */
-.main_nav{
+.main_nav {
   width: inherit;
   background-color: var(--primaryColor);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5rem 3rem;
-}.main_menu_container{
+  padding: 0.5rem 3rem;
+}
+.main_menu_container {
   display: flex;
   gap: 3rem;
-}.main_menu_container > li{
+}
+.main_menu_container > li {
   position: relative;
   color: var(--bgColor);
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-}.submenu_container{
+}
+.submenu_container {
   position: absolute;
   top: 1.6rem;
   left: 0;
   /* color: var(--textColor); */
   background-color: var(--bgColor);
   width: 40rem;
-  padding : 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  border-radius: .3rem;
+  gap: 0.5rem;
+  border-radius: 0.3rem;
   margin: auto;
   /* z-index: 4;   */
-}.submenu_container::before{
+}
+.submenu_container::before {
   content: "";
   background-color: var(--bgColor);
-  width: 1rem ;
+  width: 1rem;
   height: 1rem;
   position: absolute;
-  top: -.4rem;
+  top: -0.4rem;
   left: 2rem;
   margin: auto;
   /* transform: translateY(40px); */
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   rotate: 45deg;
-  z-index: inherit;;
-}.submenu_container > li{
+  z-index: inherit;
+}
+.submenu_container > li {
   width: 45%;
   display: flex;
   justify-content: space-between;
-}.submenu_container > li span{
+}
+.submenu_container > li span {
   /* background-color: var(--primaryColorgreen); */
   width: 1.5rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   display: grid;
   place-content: center;
   height: 1.5rem;
-  border: solid .1rem var(--primaryColorgreen);
+  border: solid 0.1rem var(--primaryColorgreen);
 }
 /* 
   End of main navigation menu

@@ -58,7 +58,11 @@ function loadAppSettings() {
             code: getCurrentLanguageInLocalStorage()
         }
     } else {
+        console.log("no setting was found");
         setLanguageInLocalStorage(TypeToCode(navigator.language.split("-")[0]))
+        return currentLanguage = {
+            code:getCurrentLanguageInLocalStorage()
+        }
     }
 }
 

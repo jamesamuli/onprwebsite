@@ -6,7 +6,7 @@ const selectLanguage = document.querySelector('.list_language')
 
 
 
-console.log(bottomNavigationMenu)
+// console.log(bottomNavigationMenu)
 
 // console.log(Data.languages[currentLanguage.code])
 // console.log(selectLanguage);
