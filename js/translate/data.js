@@ -3,7 +3,7 @@ const Data = {
 
         fr: {
             home: 'Acceuil',
-            contact: 'Nous Contacter',
+            contact: 'Nous contacter',
             blog: 'Blog'
         },
         en: {
