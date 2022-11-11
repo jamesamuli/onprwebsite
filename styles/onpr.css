@@ -98,7 +98,7 @@ body {
   font-family: var(--textFont);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--lightGray);
+  color: var(--bgColor);
 }
 .uppernav > .menu {
   width: 100%;
