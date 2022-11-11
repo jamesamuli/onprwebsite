@@ -98,7 +98,7 @@ body {
   font-family: var(--textFont);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--contrastedPrimaryColor);
+  color: var(--lightGray);
 }
 .uppernav > .menu {
   width: 100%;
@@ -108,7 +108,7 @@ body {
 }
 
 .uppernav > .menu > li > a {
-  color: var(--contrastedPrimaryColor);
+  color: var(--lightGray);
   font-weight: 600;
 }
 .uppernav > .menu > li > a > i {
@@ -129,7 +129,7 @@ body {
 .language_changer p {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--contrastedPrimaryColor);
+  color: var(--lightGray);
 }
 
 .uppernav .list_language {
@@ -182,7 +182,7 @@ body {
 /* Start of the main navigation menu */
 .main_nav {
   width: inherit;
-  background-color: var(--primaryColor);
+  background-color: var(--lightGray);
   display: flex;
   justify-content: center;
   align-items: center;
