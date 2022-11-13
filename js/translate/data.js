@@ -2,14 +2,32 @@ const Data = {
     menu: {
 
         fr: {
-            home: 'Acceuil',
-            contact: 'Nous contacter',
-            blog: 'Blog'
+            home:{
+                title : 'Acceuil',
+                link : '/'
+            },
+            contact:{
+                title : 'Nous contacter',
+                link : '/contact-us/'
+            } ,
+            blog:{
+                title : 'Blog',
+                link : 'https://blog.onpr.com'
+            }  
         },
         en: {
-            home: 'Home',
-            contact: 'Contact us',
-            blog: 'Blog'
+            home:{
+                title : 'Home',
+                link : '/'
+            },
+            contact:{
+                title : 'Contact us',
+                link : '/contact-us/'
+            } ,
+            blog:{
+                title : 'Blog',
+                link : 'https://blog.onpr.com'
+            }  
         },
     },
     languages: {

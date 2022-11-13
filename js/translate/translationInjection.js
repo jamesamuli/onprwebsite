@@ -21,28 +21,28 @@ const selectLanguage = document.querySelector('.list_language')
  * but the thing wich should not be forgotten is htlm list elements 
  * sould be equal to the list object data from your provider object.
  */
-function listInjection(ListToBeInjected){
-    ListToBeInjected.querySelectorAll('li').forEach((e, indexofELement) => {
-        for (let i = 0; i < Object.keys(Data.menu[currentLanguage.code]).length; i++) {
-            let content = Data.menu[currentLanguage.code][Object.keys(Data.menu[currentLanguage.code])[i]]
-            if (i == indexofELement) {
-                // console.log(content)
-                e.lastElementChild.innerHTML = content;
-            }
-            // else {
-            //     console.log(
-            //         `
-            //             The last element couldn't be mounted ... 
-            //             check if the list provide equal 
-            //             to Data.menu object element
-            //         `
-            //     )
-            // }
-        }
-        // console.log(e)
-    })
+function listInjection(ListToBeInjected) {
+    console.log(ListToBeInjected)
+    for (let i = 0; i < Object.keys(Data.menu[currentLanguage.code]).length; i++) {
+        let content = Data.menu[currentLanguage.code][Object.keys(Data.menu[currentLanguage.code])[i]]
+        ListToBeInjected.innerHTML += `<li ${i === 0 && "class='active'"}>
+                                            <a href=${content.link}>${content.title}</a>
+                                    </li>`
+
+    }
 }
 
+// function listInjection(ListToBeInjected){
+//     ListToBeInjected.querySelectorAll('li').forEach((e, indexofELement) => {
+//         for (let i = 0; i < Object.keys(Data.menu[currentLanguage.code]).length; i++) {
+//             console.log(Object.keys(Data.menu[currentLanguage.code]).length)
+//             let content = Data.menu[currentLanguage.code][Object.keys(Data.menu[currentLanguage.code])[i]]
+//             if (i == indexofELement) {
+//                 e.lastElementChild.innerHTML = content;
+//             }
+//         }
+//     })
+// }
 listInjection(upperNavigationMenu)
 
 /**
@@ -82,7 +82,7 @@ Object.values(Data.languages).map((e, i) => {
         <img 
             src=${e.flag} 
             alt="flag language" 
-            width="25" height="25"
+            width="20" height="20"
         >
         <p>
         ${i === 0 ?
