@@ -33,13 +33,13 @@ const Data = {
     languages: {
         fr: {
             code: 'fr',
-            flag: '../../assets/imgs/francaisIncon.png',
+            flag: './assets/imgs/francaisIncon.png',
             fr: 'Français',
             en: 'Anglais'
         },
         en: {
             code: 'en',
-            flag: '../../assets/imgs/usaIcon.png',
+            flag: './assets/imgs/usaIcon.png',
             fr: 'French',
             en: 'English'
         }
