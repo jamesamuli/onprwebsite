@@ -13,7 +13,7 @@
   --textFont: "Roboto", sans-serif;
   --fontSizetitle: clamp(1.2rem, 0.8681rem + 1.77vw, 2rem);
   --primaryColor: #6ce052;
-  --contrastedPrimaryColor: #1c6461;
+  --contrastedPrimaryColor: #000000;
   --primaryColorgreen: #baf8ab;
   --lightGray: #a0a0a0;
   --secondColor: #ec2020;
