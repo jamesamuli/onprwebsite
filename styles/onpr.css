@@ -310,7 +310,16 @@ li > .submenu-level1 {
   .logo_container > a > p {
     display: none;
   }
+  .tweetter_container{
+    display: none;
+  }
 }
+@media screen and (max-width: 628px) {
+  .upper_content > .logo_container > p{
+    /* display: none; */
+  }
+}
+
 
 #homepage {
   width: 100%;
@@ -568,7 +577,7 @@ section h1 {
   flex-wrap: wrap;
 }
 .news {
-  width: clamp(9rem, 4.4883rem + 20.62vw, 15.7rem);
+  width: clamp(12rem, 10.0140rem + 7.0600vw, 15rem);
   display: flex;
   flex-direction: column;
   margin-block: 1rem;
@@ -734,7 +743,7 @@ footer > .menu_side {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: none;
   gap: 0.5rem;
 }
@@ -749,7 +758,7 @@ footer > .menu_side > .main_list_container h3 {
 footer .bottom_footer {
   width: 100%;
   background-color: var(--contrastedPrimaryColor);
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 footer > .bottom_footer > .upper_content {
   display: flex;
@@ -813,7 +822,7 @@ footer > .bottom_footer > .upper_content > .logo_container p {
   background-color: var(--primaryColorgreen);
 }
 .newsletter > .boite > button i {
-  color: var(--primaryColor);
+  color: var(--contrastedPrimaryColor);
 }
 .bottom_footer .bottom_content {
   width: 100%;
@@ -858,4 +867,24 @@ footer > .bottom_footer > .upper_content > .logo_container p {
   .main_nav .menu > li {
     width: 100%;
   } */
+}
+
+@media screen and (max-width: 460px) {
+  .newsletter_information{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: .5rem;
+  }
+  .separator_footer{
+    display: none;
+    
+  }
+  .main_container_content > h1{
+    /* align-items: center; */
+    /* text-align: center; */
+    font-size: 1.8rem;
+  }.main_container_content > p{
+    font-size: .9rem;
+  }
 }
